@@ -1,0 +1,158 @@
+# Summary
+  Temperature      Radiation         Power        
+ Min.   :15.36   Min.   :  0.0   Min.   :9222822  
+ 1st Qu.:18.19   1st Qu.:  0.0   1st Qu.:9307488  
+ Median :20.49   Median :  0.0   Median :9337349  
+ Mean   :21.34   Mean   :254.8   Mean   :9349565  
+ 3rd Qu.:24.04   3rd Qu.:536.2   3rd Qu.:9386769  
+ Max.   :29.02   Max.   :963.2   Max.   :9528535 
+
+Standard deviation
+Temperature:	7.397766
+Radiation:	341.2318
+Power:		3052534
+
+
+
+# Metricas dos modelos
+                 SMAPE        RRMSE        R2
+PCA-SVRL    9.449549e-04 9.779133e-04 0.9997361
+PCA-MARS    9.473985e-04 1.018069e-03 0.9984815
+PCA-BRNN    1.742184e-03 2.488815e-03 0.9946899
+PCA-LM      1.851099e-04 2.111932e-04 0.9998300
+CORR-SVRL   1.074919e-03 1.171680e-03 0.9999415
+CORR-MARS   2.798447e-05 6.844400e-05 0.9999101
+CORR-BRNN   1.969842e-03 3.000576e-03 0.9959117
+CORR-LM     1.100414e-05 2.372946e-05 0.9999864
+
+# Metricas dos modelos STACK
+                       SMAPE       RRMSE        R2
+SVRR-PCA-PCA     0.010830596 0.014585141 0.7025735
+CUBIST-PCA-PCA   0.005687310 0.008312558 0.3338247
+SVRR-PCA-CORR    0.010359887 0.013126984 0.5773547
+CUBIST-PCA-CORR  0.005755186 0.008468315 0.4026344
+SVRR-CORR-PCA    0.011747321 0.014786373 0.6002995
+CUBIST-CORR-PCA  0.003949647 0.005968727 0.9489282
+SVRR-CORR-CORR   0.010105098 0.013256788 0.4232080
+CUBIST-CORR-CORR 0.001483647 0.002480861 0.9874027
+
+
+# Hiperparametros dos modelos
+-----------------------------------------
+Model     Hyperparameters
+-----------------------------------------
+               cost kernel
+PCA-SVRL          1 linear
+-----------------------------------------
+             nprune degree
+PCA-MARS          5      1
+-----------------------------------------
+            neurons
+PCA-BRNN          1
+-----------------------------------------
+          intercept
+PCA-LM         TRUE
+-----------------------------------------
+               cost kernel
+CORR-SVRL      0.25 linear
+-----------------------------------------
+             nprune degree
+CORR-MARS         4      1
+-----------------------------------------
+            neurons
+CORR-BRNN         5
+-----------------------------------------
+          intercept
+CORR-LM        TRUE
+-----------------------------------------
+-----------------------------------------
+Model            Hyperparameters
+-----------------------------------------
+                      sigma C kernel
+SVRR-PCA-PCA       3.671366 2 radial
+-----------------------------------------
+                      sigma    C kernel
+SVRR-PCA-CORR      3518.273 0.25 radial
+-----------------------------------------
+                 committees neighbors
+CUBIST-PCA-PCA           20         9
+-----------------------------------------
+                 committees neighbors
+CUBIST-PCA-CORR          20         5
+-----------------------------------------
+                      sigma    C kernel
+SVRR-CORR-PCA      19.48925 0.25 radial
+-----------------------------------------
+                      sigma    C kernel
+SVRR-CORR-CORR      7031063 0.25 radial
+-----------------------------------------
+                 committees neighbors
+CUBIST-CORR-PCA           1         5
+-----------------------------------------
+                 committees neighbors
+CUBIST-CORR-CORR         20         9      
+   
+-----------------------------------------
+OBS: Usar <https://topepo.github.io/caret/train-models-by-tag.html> para saber a descrição dos hyperparameters
+Fazer uma tabela dos hyperparametros ao estilo do meu.
+
+
+# TABLE 1
+# DM-valores do Diebold-Mariano (DM) test
+                     (A)    (B)       (C)       (D)       (E)      (F)       (G)      (H)      (I)       (J)       (K)       (L)       (M)       (N)       (O)       (P)
+(A) SVRR-PCA-PCA      NA 8.8299  8.900332  8.799045  1.267991 8.696569  8.830224 8.645346 8.643232  8.643212  8.645181  8.643259  8.643230  8.643260  8.646731  8.643260
+(B) CUBIST-PCA-PCA    NA     NA -8.770802 -1.757726 -8.967933 7.283429 -8.818677 7.289574 7.286396  7.286067  7.289598  7.286622  7.286137  7.286624  7.287056  7.286624
+(C) SVRR-PCA-CORR     NA     NA        NA  8.718712 -9.256528 8.567890 -9.992112 8.493973 8.490916  8.490881  8.493732  8.490958  8.490907  8.490959  8.495876  8.490959
+(D) CUBIST-PCA-CORR   NA     NA        NA        NA -8.936617 7.833391 -8.768311 7.679573 7.672678  7.672470  7.678942  7.672900  7.672508  7.672902  7.681310  7.672903
+(E) SVRR-CORR-PCA     NA     NA        NA        NA        NA 8.816641  9.202332 8.759543 8.757221  8.757200  8.759365  8.757248  8.757221  8.757248  8.761105  8.757248
+(F) CUBIST-CORR-PCA   NA     NA        NA        NA        NA       NA -8.613100 7.227063 7.215933  7.215006  7.225858  7.216804  7.215034  7.216812  7.218160  7.216813
+(G) SVRR-CORR-CORR    NA     NA        NA        NA        NA       NA        NA 8.538461 8.535392  8.535358  8.538220  8.535432  8.535384  8.535433  8.540399  8.535433
+(H) CUBIST-CORR-CORR  NA     NA        NA        NA        NA       NA        NA       NA 6.896037  6.865891  4.813919  6.922648  6.864220  6.922883 -7.472017  6.922916
+(I) PCA-SVRL          NA     NA        NA        NA        NA       NA        NA       NA       NA -2.131132 -6.896552 10.205160 -8.350395 10.245165 -7.183086 10.250783
+(J) PCA-MARS          NA     NA        NA        NA        NA       NA        NA       NA       NA        NA -6.860463  6.648021 -4.492580  6.662713 -7.169441  6.663165
+(K) PCA-BRNN          NA     NA        NA        NA        NA       NA        NA       NA       NA        NA        NA  6.923779  6.861363  6.924033 -7.402382  6.924065
+(L) PCA-LM            NA     NA        NA        NA        NA       NA        NA       NA       NA        NA        NA        NA -9.598685  4.453857 -7.196447  8.566513
+(M) CORR-SVRL         NA     NA        NA        NA        NA       NA        NA       NA       NA        NA        NA        NA        NA  9.615603 -7.169211  9.616334
+(N) CORR-MARS         NA     NA        NA        NA        NA       NA        NA       NA       NA        NA        NA        NA        NA        NA -7.196580  1.362230
+(O) CORR-BRNN         NA     NA        NA        NA        NA       NA        NA       NA       NA        NA        NA        NA        NA        NA        NA  7.196593
+(P) CORR-LM           NA     NA        NA        NA        NA       NA        NA       NA       NA        NA        NA        NA        NA        NA        NA        NA
+  
+# TABLE 2                                   
+# p-valores do DM test
+                     (A)          (B)          (C)          (D)          (E)          (F)          (G)          (H)          (I)          (J)          (K)          (L)          (M)          (N)          (O)          (P)
+(A) SVRR-PCA-PCA      NA 6.783874e-15 4.585749e-15 8.051696e-15 2.071029e-01 1.421015e-14 6.771655e-15 1.886548e-14 1.908721e-14 1.908941e-14 1.888266e-14 1.908438e-14 1.908744e-14 1.908434e-14 1.872160e-14 1.908433e-14
+(B) CUBIST-PCA-PCA    NA           NA 9.417754e-15 8.118463e-02 3.147095e-15 2.943825e-11 7.220185e-15 2.850499e-11 2.898400e-11 2.903407e-11 2.850142e-11 2.894973e-11 2.902345e-11 2.894936e-11 2.888390e-11 2.894932e-11
+(C) SVRR-PCA-CORR     NA           NA           NA 1.257030e-14 6.268843e-16 2.893564e-14 9.892423e-18 4.348374e-14 4.422164e-14 4.423023e-14 4.354148e-14 4.421134e-14 4.422387e-14 4.421117e-14 4.303073e-14 4.421116e-14
+(D) CUBIST-PCA-CORR   NA           NA           NA           NA 3.746998e-15 1.585498e-12 9.548806e-15 3.616054e-12 3.751719e-12 3.755869e-12 3.628255e-12 3.747268e-12 3.755110e-12 3.747215e-12 3.582641e-12 3.747211e-12
+(E) SVRR-CORR-PCA     NA           NA           NA           NA           NA 7.302289e-15 8.493652e-16 1.002459e-14 1.015447e-14 1.015566e-14 1.003449e-14 1.015300e-14 1.015447e-14 1.015297e-14 9.938139e-15 1.015297e-14
+(F) CUBIST-CORR-PCA   NA           NA           NA           NA           NA           NA 2.254521e-14 3.954005e-11 4.190749e-11 4.211095e-11 3.978988e-11 4.171734e-11 4.210465e-11 4.171543e-11 4.142292e-11 4.171524e-11
+(G) SVRR-CORR-CORR    NA           NA           NA           NA           NA           NA           NA 3.403361e-14 3.461419e-14 3.462067e-14 3.407876e-14 3.460643e-14 3.461565e-14 3.460631e-14 3.367189e-14 3.460630e-14
+(H) CUBIST-CORR-CORR  NA           NA           NA           NA           NA           NA           NA           NA 2.195139e-10 2.561768e-10 4.100425e-06 1.914903e-10 2.583773e-10 1.912586e-10 1.090279e-11 1.912261e-10
+(I) PCA-SVRL          NA           NA           NA           NA           NA           NA           NA           NA           NA 3.499015e-02 2.189341e-10 2.953514e-18 9.567582e-14 2.353161e-18 4.974321e-11 2.279248e-18
+(J) PCA-MARS          NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 2.633934e-10 7.754322e-10 1.554468e-05 7.199805e-10 5.340956e-11 7.183393e-10
+(K) PCA-BRNN          NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 1.903808e-10 2.621833e-10 1.901325e-10 1.575051e-11 1.901007e-10
+(L) PCA-LM            NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 9.150834e-17 1.817967e-05 4.639471e-11 2.915626e-14
+(M) CORR-SVRL         NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 8.318002e-17 5.347354e-11 8.283779e-17
+(N) CORR-MARS         NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 4.636269e-11 1.755176e-01
+(O) CORR-BRNN         NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 4.635946e-11
+(P) CORR-LM           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA
+
+OBS1: 
+Tu vai plotar a TABLE 1 conforme eu fiz a minha TABLE V. 
+Usar <http://www.tablesgenerator.com/> para fazer as tabelas em LaTeX.
+Usar os resultados de TABLE 2 para fazer as análises de TABLE 1.
+TABLE 2 estão os p-valores do teste estatístico, se (p-valor < 0.01), então você coloca um * no valor da TABLE 1. Se (0.01 > p-valor > 0.05), colocar ** no valor de TABLE 1.
+Usar a TABLE V do meu artigo como referência.
+
+Se (p-valor > 0.05) significa que os modelos são estatisticamente iguais, caso contrário são diferentes.
+O teste da TABLE 1 é realizado da seguinte forma:
+"Modelo da Linha" vs "Modelo da Coluna"
+Ex: (A) vs (A), (A) vs (B), ..., (P) vs (P).
+
+Na Tabela em LaTeX substituir NA por - 
+
+Usar até 4 casas decimais nos valores.
+
+OBS2: 
+Citar os 2 trabalhos do Matheus (elsevier e IJCNN), e tentar citar os dois do CBIC.
+
