@@ -1,4 +1,4 @@
-# Publications in 2020 IEEE World Congress on Computational Intelligence (WCCI)
+# Publications in 2020 IEEE World Congress on Computational Intelligence (WCCI) | 2020 International Joint Conference on Neural Networks (IJCNN)
 
 ## :moneybag: Multi-step ahead Bitcoin price forecasting based on VMD and ensemble learning methods
 
