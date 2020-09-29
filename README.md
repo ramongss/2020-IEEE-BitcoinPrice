@@ -10,7 +10,7 @@
 
 ### Publication
 - [Preprint (ResearchGate)](https://www.researchgate.net/publication/340654637_Multi-step_ahead_Bitcoin_Price_Forecasting_Based_on_VMD_and_Ensemble_Learning_Methods)
-- [Conference paper (IEEE *Xplore*)]()
+- [Conference paper (IEEE *Xplore*)](https://ieeexplore.ieee.org/document/9207152)
 
 ### How to cite this paper
 ```bibtex
@@ -36,7 +36,7 @@
 - [Solar power repository file](Solar_Power/)
 
 ### Publication
-- [Conference paper (IEEE *Xplore*)]()
+- [Conference paper (IEEE *Xplore*)](https://ieeexplore.ieee.org/document/9206777)
 
 ### How to cite this paper
 ```bibtex
