@@ -22,7 +22,7 @@
     pages={1--8},
     month={July},
     address={Glasgow, Scotland},
-    doi={}
+    doi={10.1109/IJCNN48605.2020.9207152}
 }
 ```
 ----
@@ -48,6 +48,6 @@
     pages={1--8},
     month={July},
     address={Glasgow, Scotland},
-    doi={}
+    doi={10.1109/IJCNN48605.2020.9206777}
 }
 ```
