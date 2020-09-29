@@ -41,7 +41,7 @@
 ### How to cite this paper
 ```bibtex
 @inproceedings{fraccanabbia2020solar,
-    author={Fraccanabbia, Naylene and da Silva, Ramon Gomes and Ribeiro, Matheus Henrique Dal Molin and Moreno, Sinvaldo Rodrigues and Mariani, Viviana Cocco and Coelho, Leandro Santos},
+    author={Fraccanabbia, Naylene and da Silva, Ramon Gomes and Ribeiro, Matheus Henrique Dal Molin and Moreno, Sinvaldo Rodrigues and Coelho, Leandro Santos and Mariani, Viviana Cocco},
     booktitle={International Joint Conference on Neural Networks (IJCNN)},
     title={Solar Power Forecasting Based on Ensemble Learning Methods},
     year={2020},
