@@ -21,7 +21,7 @@
     year={2020},
     pages={1--8},
     month={July},
-    address={Glasgow, Scotland},
+    address={Glasgow, United Kingdom},
     doi={10.1109/IJCNN48605.2020.9207152}
 }
 ```
@@ -47,7 +47,7 @@
     year={2020},
     pages={1--8},
     month={July},
-    address={Glasgow, Scotland},
+    address={Glasgow, United Kingdom},
     doi={10.1109/IJCNN48605.2020.9206777}
 }
 ```
